@@ -85,7 +85,6 @@ def game_loop():
             position_y = position_y + velocity_y
 
             if abs(position_x - food_x)<8 and abs(position_y - food_y)<8:
-                print("score: ", score)
                 play_sound("eat_app.mp3")
                 food_x = random.randint(30, screen_width/2)
                 food_y = random.randint(30, screen_height/2)
@@ -100,15 +99,13 @@ def game_loop():
             snk_head.append(position_x)
             snk_head.append(position_y)
             snk_list.append(snk_head)
-            # print(snk_list)
+           
                 
             if len(snk_list)>snk_length:
                 del snk_list[0]
-            # pygame.draw.rect(game_window, black, [position_x, position_y, side, side]) #(jaha dikhana hai, kis color me dikhana hai, [x me position , y me position, length, breath])
             if ((position_x<0) or (position_x>screen_width) or (position_y<0) or (position_y>screen_height) or (snk_head in snk_list[:-1])):
                 g_over = True
                 
-                print("Game Over")
             display_snake(game_window, black, snk_list, side)
         pygame.display.update()
         clock.tick(fps)
