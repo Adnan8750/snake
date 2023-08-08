@@ -4,7 +4,7 @@ import random
 pygame.init()
 pygame.mixer.init()
  
-screen_width = 600
+screen_width = 700
 screen_height = 500
 
 game_window = pygame.display.set_mode((screen_width, screen_height))
