@@ -35,7 +35,7 @@ def start_window():
     g_exit = False
     while not g_exit:
         game_window.fill(bg_color)
-        text("Welcome to Snake game", black, 50,"Reglisse_Back.otf", 55, 190)
+        text("Welcome to Adnan's Snake game", black, 50,"Reglisse_Back.otf", 55, 190)
         text("Press Space bar to play", black, 36,"Reglisse.otf", 125, 260)
         
         for event in pygame.event.get():
